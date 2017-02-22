@@ -87,6 +87,8 @@ public class Accueil extends javax.swing.JFrame {
 
     private void inscriptionDesAdherentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inscriptionDesAdherentsActionPerformed
         // TODO add your handling code here:
+        
+        
     }//GEN-LAST:event_inscriptionDesAdherentsActionPerformed
 
     private void moteurDeRechercheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moteurDeRechercheActionPerformed

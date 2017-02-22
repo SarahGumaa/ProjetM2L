@@ -10,6 +10,34 @@ package projetm2l;
  * @author user
  */
 public class Adherent extends GestionAdherent{
+
+    public String getNom() {
+        return nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public String getDateNaissance() {
+        return dateNaissance;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public int getTelephone() {
+        return telephone;
+    }
+
+    public int getMobile() {
+        return mobile;
+    }
     
     private String nom;
     private String prenom;
@@ -18,6 +46,7 @@ public class Adherent extends GestionAdherent{
     private String email;
     private int telephone;
     private int mobile;
+    
     
     
     

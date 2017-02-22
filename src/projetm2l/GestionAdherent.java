@@ -124,6 +124,11 @@ public class GestionAdherent extends javax.swing.JFrame {
 
         masculin.setFont(new java.awt.Font("Agency FB", 0, 14)); // NOI18N
         masculin.setText("Masculin");
+        masculin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                masculinActionPerformed(evt);
+            }
+        });
 
         feminin.setFont(new java.awt.Font("Agency FB", 0, 14)); // NOI18N
         feminin.setText("Féminin");
@@ -153,19 +158,13 @@ public class GestionAdherent extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Valider)
-                .addGap(18, 18, 18)
-                .addComponent(Quitter)
-                .addGap(69, 69, 69))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(176, 176, 176)
+                        .addGap(126, 126, 126)
                         .addComponent(jLabel10))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(95, 95, 95)
+                        .addGap(207, 207, 207)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(1, 1, 1)
@@ -199,14 +198,20 @@ public class GestionAdherent extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(categorie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
-                .addContainerGap(152, Short.MAX_VALUE))
+                                            .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(246, 246, 246)
+                        .addComponent(Valider)
+                        .addGap(18, 18, 18)
+                        .addComponent(Quitter)))
+                .addContainerGap(202, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(31, 31, 31)
                 .addComponent(jLabel10)
-                .addGap(59, 59, 59)
+                .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -243,11 +248,11 @@ public class GestionAdherent extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(categorie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Quitter)
                     .addComponent(Valider))
-                .addGap(19, 19, 19))
+                .addGap(30, 30, 30))
         );
 
         pack();
@@ -277,8 +282,20 @@ public class GestionAdherent extends javax.swing.JFrame {
 
     private void ValiderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ValiderActionPerformed
         // TODO add your handling code here:
-        System.out.println(prenom.getText());
+        System.out.println(nom.getText());
+          System.out.println(prenom.getText());
+            System.out.println(adresse.getText());
+              System.out.println(dateNaissance.getText());
+              System.out.println(mobile.getText());
+              System.out.println(telephone.getText());
+              System.out.println(email.getText());
+              Adherent a = new Adherent(nom.getText(),);
+              DBConnection.addAdherent(a);
     }//GEN-LAST:event_ValiderActionPerformed
+
+    private void masculinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_masculinActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_masculinActionPerformed
 
     /**
      * @param args the command line arguments
