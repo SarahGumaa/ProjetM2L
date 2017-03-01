@@ -35,11 +35,11 @@ public class Adherent extends GestionAdherent{
         return email;
     }
 
-    public int getTelephone() {
+    public String getTelephone() {
         return telephone;
     }
 
-    public int getMobile() {
+    public String getMobile() {
         return mobile;
     }
     
@@ -48,15 +48,15 @@ public class Adherent extends GestionAdherent{
     private String adresse;
     private String dateNaissance;
     private String email;
-    private int telephone;
-    private int mobile;
+    private String telephone;
+    private String mobile;
     
     
     
     
     
     
- public Adherent(String nom, String prenom, String adresse, String dateNaissance, String email,int telephone, int mobile){
+ public Adherent(String nom, String prenom, String adresse, String dateNaissance, String email,String telephone, String mobile){
      this.nom=nom;
      this.prenom=prenom;
      this.adresse=adresse;

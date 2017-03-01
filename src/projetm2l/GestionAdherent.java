@@ -282,14 +282,14 @@ public class GestionAdherent extends javax.swing.JFrame {
 
     private void ValiderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ValiderActionPerformed
         // TODO add your handling code here:
-        System.out.println(nom.getText());
+        /*System.out.println(nom.getText());
           System.out.println(prenom.getText());
             System.out.println(adresse.getText());
               System.out.println(dateNaissance.getText());
               System.out.println(mobile.getText());
               System.out.println(telephone.getText());
-              System.out.println(email.getText());
-              Adherent a = new Adherent(nom.getText());
+              System.out.println(email.getText());*/
+              Adherent a = new Adherent(nom.getText(),prenom.getText(),adresse.getText(),dateNaissance.getText(),email.getText(),telephone.getText(),mobile.getText());
               DBConnection.addAdherent(a);
     }//GEN-LAST:event_ValiderActionPerformed
 
