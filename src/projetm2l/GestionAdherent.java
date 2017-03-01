@@ -289,7 +289,7 @@ public class GestionAdherent extends javax.swing.JFrame {
               System.out.println(mobile.getText());
               System.out.println(telephone.getText());
               System.out.println(email.getText());
-              Adherent a = new Adherent(nom.getText(),);
+              Adherent a = new Adherent(nom.getText());
               DBConnection.addAdherent(a);
     }//GEN-LAST:event_ValiderActionPerformed
 

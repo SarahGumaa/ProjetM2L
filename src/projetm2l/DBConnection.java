@@ -14,7 +14,7 @@ import java.sql.Statement;
  *
  * @author Yassine
  */
-public class DBConnection {
+public class DBConnection extends GestionAdherent{
     static Connection conn;
     
     public static void addAdherent(Adherent a){
@@ -25,7 +25,7 @@ public class DBConnection {
       Statement stmt = (Statement ) conn.createStatement();
 
       String insert = "INSERT INTO adherent(nom,prenom,adresse,email,telephone,mobile,date_naissance) "
-              + "VALUES ('"a.getNom()"','"+prenom+"','"+adresse+"','"+email+"','"+telephone+"','"+mobile+"','"+date_naissance+"');";
+              + "VALUES ('"a.getNom()"','"a.getPrenom()"','"a.getAdresse()"','"a.getEmail()"','"a.getTelephone()"','"a.getMobile()"','"a.getDateNaissance()"');";
       stmt.executeUpdate(insert);
   }catch (SQLException e){
     System.err.println(e);

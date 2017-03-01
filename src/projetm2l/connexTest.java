@@ -34,7 +34,7 @@ public static void main(String[] args){
       String mobile = " " ;
       String date_naissance = " " ;
       String insert = "INSERT INTO adherent(nom,prenom,adresse,email,telephone,mobile,date_naissance) "
-              + "VALUES ('"+nom+"','"+prenom+"','"+adresse+"','"+email+"','"+telephone+"','"+mobile+"','"+date_naissance+"');";
+              + "VALUES ('"+name+"','"+prenom+"','"+adresse+"','"+email+"','"+telephone+"','"+mobile+"','"+date_naissance+"');";
       stmt.executeUpdate(insert);
   }catch (SQLException e){
     System.err.println(e);
